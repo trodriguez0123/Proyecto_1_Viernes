@@ -3,35 +3,64 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Sitio web de prueba</title>
+    <title>Tiago Rodriguez - Contacto</title>
     <link rel="stylesheet" href="./styles/estilos.css" />
   </head>
   <body>
     <header>
-      <navbar>
-        <ul>
+      <nav class="navbar">
+        <a id="clase_titulo" href="index.html">
+          <div class="logo">TIAGO <span>RODRIGUEZ</span></div>
+        </a>
+
+        <input type="checkbox" id="menu-checkbox" class="menu-checkbox" />
+        <label for="menu-checkbox" class="menu-toggle">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </label>
+
+        <ul class="nav-list">
           <li><a href="index.html">Inicio</a></li>
           <li><a href="sobreMi.html">Sobre mi</a></li>
           <li><a href="contacto.html">Contacto</a></li>
         </ul>
-      </navbar>
+      </nav>
     </header>
 
     <main>
-      <h1 class="contacto">Contacto</h1>
-      
-      <p>Podes contactarme a través de los siguientes medios:</p>
-        <ul>
-            <li>
-                <a href="https://www.facebook.com/tiagorodriguez58" target="_blank">Facebook</a>
-                <a href="https://www.youtube.com" target="_blank">YouTube</a>
-                <a href="https://www.instagram.com/tiitirodriguez/" target="_blank">Instagram</a>
-                <a href="mailto:tiagorodriguez58@gmail.com">Correo electrónico</a>
-            </li>
+      <h1 class="seccion-titulo">Contacto</h1>
+      <p class="seccion-texto">
+        Si estás interesado en colaborar en algún proyecto tecnológico o tienes
+        alguna consulta, puedes contactarme a través de los siguientes medios:
+      </p>
+
+      <ul class="redes-container">
+        <li>
+          <a href="https://www.facebook.com/tiagorodriguez58" target="_blank"
+            >Facebook</a
+          >
+        </li>
+        <li><a href="https://www.youtube.com" target="_blank">YouTube</a></li>
+        <li>
+          <a href="https://www.instagram.com/tiitirodriguez/" target="_blank"
+            >Instagram</a
+          >
+        </li>
+        <li>
+          <a href="mailto:tiagorodriguez58@gmail.com">Correo electrónico</a>
+        </li>
+      </ul>
     </main>
 
     <footer>
-      <p>&copy; 2026 Mi Sitio Web. Todos los derechos reservados.</p>
+      <div class="footer-content">
+        <h3>TIAGO RODRIGUEZ</h3>
+        <p>Soluciones Lógicas & Desarrollo de Software</p>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Mi Sitio Web. Todos los derechos reservados.</p>
+      </div>
     </footer>
   </body>
 </html>

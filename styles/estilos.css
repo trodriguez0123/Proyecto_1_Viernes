@@ -1,107 +1,306 @@
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap");
+
+:root {
+  --azul-oscuro: #254565;
+  --azul-claro: #3277b3;
+  --amarillo-luz: #ffeb3b;
+  --amarillo-hover: #fbc02d;
+  --blanco: #ffffff;
+  --gris-fondo: #f8f9fa;
+  --gris-texto: #555555;
+}
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
 }
 
 body {
-  font-family:
-    "Inter",
-    system-ui,
-    -apple-system,
-    sans-serif;
-  background-color: #fafafa;
-  color: #333333;
-  line-height: 1.6;
+  background-color: var(--gris-fondo);
+  color: var(--azul-oscuro);
   display: flex;
   flex-direction: column;
   min-height: 100vh;
 }
 
-/* Esto son estilos para el encabezado */
+/* --- HEADER & NAVBAR --- */
 header {
-  background-color: #ffffff;
-  border-bottom: 1px solid #eaeaea;
-  padding: 1.5rem 5%;
+  background-color: var(--blanco);
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.05);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 1.2rem 5%;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
-header h1 {
+.logo {
+  font-weight: 700;
   font-size: 1.5rem;
-  font-weight: 600;
-  letter-spacing: -0.5px;
+  color: var(--azul-oscuro);
+  letter-spacing: 1px;
 }
 
-nav ul {
-  list-style: none;
+.logo span {
+  color: var(--azul-claro);
+}
+
+.nav-list {
   display: flex;
+  list-style: none;
   gap: 2rem;
 }
 
-nav a {
+.nav-list a {
   text-decoration: none;
-  color: #666666;
-  font-size: 0.95rem;
-  transition: color 0.3s ease;
+  color: var(--azul-oscuro);
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+  position: relative;
 }
 
-nav a:hover {
-  color: #000000;
+.nav-list a:hover {
+  color: var(--amarillo-hover);
 }
 
+/* --- MAIN CONTAINER --- */
 main {
-  flex-grow: 1; /* Hace que el main ocupe el espacio disponible y empuje el footer abajo */
-  max-width: 800px;
-  margin: 4rem auto;
-  padding: 0 2rem;
+  flex: 1;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 3rem 5%;
+  width: 100%;
 }
 
-h2 {
-  font-size: 2rem;
-  font-weight: 300;
-  margin-bottom: 1.5rem;
-  color: #111111;
+/* --- HERO SECTION (Index) --- */
+.hero-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 4rem;
+  min-height: 60vh;
 }
 
-p {
-  margin-bottom: 1.5rem;
-  color: #555555;
+.hero-image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
 }
 
-footer {
-  text-align: center;
-  padding: 2rem;
-  font-size: 0.85rem;
-  color: #999999;
-  border-top: 1px solid #eaeaea;
-  background-color: #ffffff;
+.hero-image img {
+  width: 100%;
+  max-width: 450px;
+  height: auto;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(37, 69, 101, 0.15);
+  transition: transform 0.3s ease;
 }
 
-a {
-  color: #0070f3;
+.hero-image img:hover {
+  transform: translateY(-5px);
+}
+
+.hero-content {
+  flex: 1;
+}
+
+.hero-content h1 {
+  font-size: 3rem;
+  color: var(--azul-oscuro);
+  margin-bottom: 1rem;
+  line-height: 1.2;
+}
+
+.hero-content p {
+  color: var(--gris-texto);
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+  line-height: 1.6;
+}
+
+.btn-primary {
+  display: inline-block;
+  padding: 0.8rem 2rem;
+  background-color: var(--azul-claro);
+  color: var(--blanco);
   text-decoration: none;
+  border-radius: 30px;
+  font-weight: 600;
+  transition:
+    background-color 0.3s ease,
+    transform 0.2s ease;
 }
 
-a:hover {
-  text-decoration: underline;
+.btn-primary:hover {
+  background-color: var(--azul-oscuro);
+  transform: translateY(-2px);
 }
 
-img {
-  max-width: 100%;
-  border-radius: 8px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+/* --- SECCIONES GENERICAS (Sobre mi / Contacto) --- */
+.seccion-titulo {
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  color: var(--azul-oscuro);
+  position: relative;
 }
 
-.contacto {
-  text-decoration: underline;
-  color: #49627e;
+.seccion-titulo::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 4px;
+  background-color: var(--amarillo-hover);
+  margin: 10px auto 0;
+  border-radius: 2px;
 }
 
-.sobre_mi {
-  text-decoration: underline;
-  color: #49627e;
+.seccion-texto {
+  text-align: center;
+  color: var(--gris-texto);
+  line-height: 1.8;
+  max-width: 800px;
+  margin: 0 auto 2rem;
+}
+
+/* --- CONTACTO LINKS --- */
+.redes-container {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  list-style: none;
+  margin-top: 2rem;
+}
+
+.redes-container a {
+  display: block;
+  padding: 1rem 2rem;
+  background-color: var(--blanco);
+  color: var(--azul-oscuro);
+  text-decoration: none;
+  font-weight: 600;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+}
+
+.redes-container a:hover {
+  background-color: var(--azul-claro);
+  color: var(--blanco);
+  transform: translateY(-3px);
+}
+
+/* --- FOOTER --- */
+footer {
+  background-color: var(--azul-oscuro);
+  color: var(--blanco);
+  padding: 3rem 5% 1.5rem;
+  margin-top: auto;
+}
+
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.footer-content h3 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+  color: var(--blanco);
+}
+
+.footer-content p {
+  color: #a0b2c6;
+}
+
+.footer-bottom {
+  text-align: center;
+  padding-top: 1.5rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  font-size: 0.85rem;
+  color: #a0b2c6;
+}
+
+/* --- MENU HAMBURGUESA (Checkbox Hack) --- */
+.menu-checkbox {
+  display: none;
+}
+
+.menu-toggle {
+  display: none;
+  cursor: pointer;
+  flex-direction: column;
+  gap: 6px;
+  z-index: 1001;
+}
+
+.bar {
+  width: 28px;
+  height: 3px;
+  background-color: var(--azul-oscuro);
+  transition: 0.4s all ease;
+  border-radius: 3px;
+}
+
+@media (max-width: 768px) {
+  .hero-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero-image {
+    order: -1; /* Mueve la imagen arriba en móviles */
+  }
+
+  .menu-toggle {
+    display: flex;
+  }
+
+  .nav-list {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: var(--blanco);
+    padding: 2rem;
+    text-align: center;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+  }
+
+  .menu-checkbox:checked ~ .nav-list {
+    display: flex;
+  }
+
+  .menu-checkbox:checked ~ .menu-toggle .bar:nth-child(1) {
+    transform: translateY(9px) rotate(45deg);
+  }
+
+  .menu-checkbox:checked ~ .menu-toggle .bar:nth-child(2) {
+    opacity: 0;
+  }
+
+  .menu-checkbox:checked ~ .menu-toggle .bar:nth-child(3) {
+    transform: translateY(-9px) rotate(-45deg);
+  }
+}
+
+#clase_titulo {
+  text-decoration: none;
 }

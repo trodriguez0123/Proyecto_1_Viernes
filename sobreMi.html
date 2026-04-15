@@ -3,32 +3,53 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Sitio web de prueba</title>
+    <title>Tiago Rodriguez - Sobre Mí</title>
     <link rel="stylesheet" href="./styles/estilos.css" />
   </head>
   <body>
     <header>
-      <navbar>
-        <ul>
+      <nav class="navbar">
+        <a id="clase_titulo" href="index.html">
+          <div class="logo">TIAGO <span>RODRIGUEZ</span></div>
+        </a>
+        <input type="checkbox" id="menu-checkbox" class="menu-checkbox" />
+        <label for="menu-checkbox" class="menu-toggle">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </label>
+
+        <ul class="nav-list">
           <li><a href="index.html">Inicio</a></li>
           <li><a href="sobreMi.html">Sobre mi</a></li>
           <li><a href="contacto.html">Contacto</a></li>
         </ul>
-      </navbar>
+      </nav>
     </header>
 
     <main>
-      <h1 class="sobre_mi">Sobre mí</h1>
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero sapiente
-        magni itaque ducimus, quas nesciunt voluptatibus nemo iste repudiandae
-        quibusdam ipsum nobis debitis blanditiis aperiam commodi ullam totam
-        repellendus doloremque!
+      <h1 class="seccion-titulo">Sobre mí</h1>
+      <p class="seccion-texto">
+        Soy un estudiante avanzado de la Licenciatura en Gestión de Tecnología
+        de la Información. Me apasiona el desarrollo web full-stack,
+        especialmente trabajando con el entorno PERN, y la resolución de
+        desafíos lógicos para brindar soluciones tecnológicas eficaces.
+      </p>
+      <p class="seccion-texto">
+        Cuento con experiencia en atención al cliente y soporte técnico, y
+        disfruto trabajar colaborativamente para alcanzar los objetivos de los
+        proyectos en los que me involucro.
       </p>
     </main>
 
     <footer>
-      <p>&copy; 2026 Mi Sitio Web. Todos los derechos reservados.</p>
+      <div class="footer-content">
+        <h3>TIAGO RODRIGUEZ</h3>
+        <p>Soluciones Lógicas & Desarrollo de Software</p>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Mi Sitio Web. Todos los derechos reservados.</p>
+      </div>
     </footer>
   </body>
 </html>
