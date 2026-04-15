@@ -147,7 +147,7 @@ main {
   transform: translateY(-2px);
 }
 
-/* --- SECCIONES GENERICAS (Sobre mi / Contacto) --- */
+/* (Sobre mi / Contacto) */
 .seccion-titulo {
   font-size: 2.5rem;
   margin-bottom: 1.5rem;
@@ -174,7 +174,7 @@ main {
   margin: 0 auto 2rem;
 }
 
-/* --- CONTACTO LINKS --- */
+/* Links */
 .redes-container {
   display: flex;
   justify-content: center;
@@ -203,7 +203,6 @@ main {
   transform: translateY(-3px);
 }
 
-/* --- FOOTER --- */
 footer {
   background-color: var(--azul-oscuro);
   color: var(--blanco);
@@ -236,7 +235,7 @@ footer {
   color: #a0b2c6;
 }
 
-/* --- MENU HAMBURGUESA (Checkbox Hack) --- */
+/* Y aca se define el menu hamburguesa */
 .menu-checkbox {
   display: none;
 }
@@ -264,7 +263,7 @@ footer {
   }
 
   .hero-image {
-    order: -1; /* Mueve la imagen arriba en móviles */
+    order: -1; /* Esto lo que hace es mover la imagen mas arriba en celulares */
   }
 
   .menu-toggle {
